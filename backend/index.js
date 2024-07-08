@@ -155,7 +155,7 @@ app.get("/allproducts", async (req, res) => {
 // endpoint for getting latest products data
 app.get("/newcollections", async (req, res) => {
   let products = await Product.find({});
-  let arr = products.slice(0).slice(-8);
+  let arr = products.slice(4).slice(-6);
   console.log("New Collections");
   res.send(arr);
 });
