@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Shop from "./Pages/Shop";
 import Cart from "./Pages/Cart";
 import Product from "./Pages/Product";
-import Company from "./Pages/Company";
 import Footer from "./Components/Footer/Footer";
 import ShopCategory from "./Pages/ShopCategory";
 import television_banner from"./Components/Assets/television_banner.jpg";
@@ -31,7 +30,7 @@ function App() {
           </Route>
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignup/>} />
-          <Route path="/company" element={<Company />} />
+            
         </Routes>
         <Footer/>
       </Router>

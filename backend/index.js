@@ -150,6 +150,8 @@ app.get("/allproducts", async (req, res) => {
 });
 
 
+
+
 // endpoint for getting latest products data
 app.get("/newcollections", async (req, res) => {
   let products = await Product.find({});
@@ -158,12 +160,11 @@ app.get("/newcollections", async (req, res) => {
   res.send(arr);
 });
 
-
-// endpoint for getting womens products data
-app.get("/popularinwomen", async (req, res) => {
-  let products = await Product.find({ category: "women" });
-  let arr = products.splice(0, 4);
-  console.log("Popular In Women");
+// endpoint for getting popular products data
+app.get("/popular", async (req, res) => {
+  let products = await Product.find({});
+  let arr = products.slice(0, -8);
+  console.log("Popular");
   res.send(arr);
 });
 

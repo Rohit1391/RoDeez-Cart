@@ -25,4 +25,4 @@ const Product = () => {
   ) : null
 }
 
-export default Product
+export default Product 
