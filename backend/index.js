@@ -163,7 +163,7 @@ app.get("/newcollections", async (req, res) => {
 // endpoint for getting popular products data
 app.get("/popular", async (req, res) => {
   let products = await Product.find({});
-  let arr = products.slice(0, -8);
+  let arr = products.slice(0, 8);
   console.log("Popular");
   res.send(arr);
 });
